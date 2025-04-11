@@ -1,0 +1,317 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'keyfilt:akeyfilt|keysecfilt'
+Slack : -7.719
+TNS   : -57.579
+
+Type  : Slow 1200mV 85C Model Setup 'mode'
+Slack : -7.154
+TNS   : -142.280
+
+Type  : Slow 1200mV 85C Model Setup 'keyfilt:akeyfilt|keyminfilt'
+Slack : -7.015
+TNS   : -52.628
+
+Type  : Slow 1200mV 85C Model Setup 'q'
+Slack : -6.112
+TNS   : -85.987
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -3.730
+TNS   : -621.119
+
+Type  : Slow 1200mV 85C Model Setup 'keyfilt:akeyfilt|keysetfilt'
+Slack : 0.038
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'mode'
+Slack : -1.829
+TNS   : -43.166
+
+Type  : Slow 1200mV 85C Model Hold 'keyfilt:akeyfilt|keysetfilt'
+Slack : -0.524
+TNS   : -0.524
+
+Type  : Slow 1200mV 85C Model Hold 'q'
+Slack : -0.372
+TNS   : -1.746
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : -0.153
+TNS   : -0.362
+
+Type  : Slow 1200mV 85C Model Hold 'keyfilt:akeyfilt|keyminfilt'
+Slack : -0.085
+TNS   : -0.085
+
+Type  : Slow 1200mV 85C Model Hold 'keyfilt:akeyfilt|keysecfilt'
+Slack : 0.379
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'mode'
+Slack : -2.590
+TNS   : -31.791
+
+Type  : Slow 1200mV 85C Model Recovery 'q'
+Slack : -1.298
+TNS   : -16.673
+
+Type  : Slow 1200mV 85C Model Recovery 'keyfilt:akeyfilt|keysecfilt'
+Slack : -0.488
+TNS   : -3.878
+
+Type  : Slow 1200mV 85C Model Recovery 'keyfilt:akeyfilt|keyminfilt'
+Slack : -0.426
+TNS   : -3.408
+
+Type  : Slow 1200mV 85C Model Removal 'mode'
+Slack : -2.199
+TNS   : -32.422
+
+Type  : Slow 1200mV 85C Model Removal 'q'
+Slack : -1.648
+TNS   : -24.904
+
+Type  : Slow 1200mV 85C Model Removal 'keyfilt:akeyfilt|keyminfilt'
+Slack : 0.458
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'keyfilt:akeyfilt|keysecfilt'
+Slack : 0.517
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -295.939
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'q'
+Slack : -1.487
+TNS   : -23.792
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'keyfilt:akeyfilt|keyminfilt'
+Slack : -1.487
+TNS   : -11.896
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'keyfilt:akeyfilt|keysecfilt'
+Slack : -1.487
+TNS   : -11.896
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'keyfilt:akeyfilt|keysetfilt'
+Slack : -1.487
+TNS   : -4.461
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'mode'
+Slack : 0.347
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'keyfilt:akeyfilt|keysecfilt'
+Slack : -7.146
+TNS   : -53.493
+
+Type  : Slow 1200mV 0C Model Setup 'mode'
+Slack : -6.947
+TNS   : -136.108
+
+Type  : Slow 1200mV 0C Model Setup 'keyfilt:akeyfilt|keyminfilt'
+Slack : -6.532
+TNS   : -49.046
+
+Type  : Slow 1200mV 0C Model Setup 'q'
+Slack : -5.723
+TNS   : -81.069
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -3.475
+TNS   : -570.846
+
+Type  : Slow 1200mV 0C Model Setup 'keyfilt:akeyfilt|keysetfilt'
+Slack : 0.133
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'mode'
+Slack : -1.753
+TNS   : -40.214
+
+Type  : Slow 1200mV 0C Model Hold 'q'
+Slack : -0.479
+TNS   : -2.488
+
+Type  : Slow 1200mV 0C Model Hold 'keyfilt:akeyfilt|keysetfilt'
+Slack : -0.475
+TNS   : -0.475
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : -0.095
+TNS   : -0.097
+
+Type  : Slow 1200mV 0C Model Hold 'keyfilt:akeyfilt|keyminfilt'
+Slack : -0.042
+TNS   : -0.042
+
+Type  : Slow 1200mV 0C Model Hold 'keyfilt:akeyfilt|keysecfilt'
+Slack : 0.382
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'mode'
+Slack : -2.588
+TNS   : -31.564
+
+Type  : Slow 1200mV 0C Model Recovery 'q'
+Slack : -1.119
+TNS   : -13.968
+
+Type  : Slow 1200mV 0C Model Recovery 'keyfilt:akeyfilt|keysecfilt'
+Slack : -0.293
+TNS   : -2.336
+
+Type  : Slow 1200mV 0C Model Recovery 'keyfilt:akeyfilt|keyminfilt'
+Slack : -0.245
+TNS   : -1.960
+
+Type  : Slow 1200mV 0C Model Removal 'mode'
+Slack : -1.893
+TNS   : -27.713
+
+Type  : Slow 1200mV 0C Model Removal 'q'
+Slack : -1.638
+TNS   : -24.839
+
+Type  : Slow 1200mV 0C Model Removal 'keyfilt:akeyfilt|keyminfilt'
+Slack : 0.464
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'keyfilt:akeyfilt|keysecfilt'
+Slack : 0.513
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -295.939
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'q'
+Slack : -1.487
+TNS   : -24.306
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'keyfilt:akeyfilt|keyminfilt'
+Slack : -1.487
+TNS   : -11.896
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'keyfilt:akeyfilt|keysecfilt'
+Slack : -1.487
+TNS   : -11.896
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'keyfilt:akeyfilt|keysetfilt'
+Slack : -1.487
+TNS   : -4.461
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'mode'
+Slack : 0.192
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'keyfilt:akeyfilt|keysecfilt'
+Slack : -3.242
+TNS   : -24.233
+
+Type  : Fast 1200mV 0C Model Setup 'keyfilt:akeyfilt|keyminfilt'
+Slack : -2.926
+TNS   : -21.950
+
+Type  : Fast 1200mV 0C Model Setup 'mode'
+Slack : -2.633
+TNS   : -47.253
+
+Type  : Fast 1200mV 0C Model Setup 'q'
+Slack : -2.015
+TNS   : -28.439
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -1.006
+TNS   : -152.310
+
+Type  : Fast 1200mV 0C Model Setup 'keyfilt:akeyfilt|keysetfilt'
+Slack : 0.469
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'mode'
+Slack : -0.824
+TNS   : -20.284
+
+Type  : Fast 1200mV 0C Model Hold 'keyfilt:akeyfilt|keysetfilt'
+Slack : -0.310
+TNS   : -0.310
+
+Type  : Fast 1200mV 0C Model Hold 'q'
+Slack : -0.209
+TNS   : -1.291
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -0.198
+TNS   : -0.684
+
+Type  : Fast 1200mV 0C Model Hold 'keyfilt:akeyfilt|keyminfilt'
+Slack : -0.174
+TNS   : -0.598
+
+Type  : Fast 1200mV 0C Model Hold 'keyfilt:akeyfilt|keysecfilt'
+Slack : 0.041
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'mode'
+Slack : -0.665
+TNS   : -6.632
+
+Type  : Fast 1200mV 0C Model Recovery 'keyfilt:akeyfilt|keysecfilt'
+Slack : -0.107
+TNS   : -0.846
+
+Type  : Fast 1200mV 0C Model Recovery 'keyfilt:akeyfilt|keyminfilt'
+Slack : -0.087
+TNS   : -0.692
+
+Type  : Fast 1200mV 0C Model Recovery 'q'
+Slack : -0.019
+TNS   : -0.038
+
+Type  : Fast 1200mV 0C Model Removal 'mode'
+Slack : -1.179
+TNS   : -17.518
+
+Type  : Fast 1200mV 0C Model Removal 'q'
+Slack : -0.682
+TNS   : -10.075
+
+Type  : Fast 1200mV 0C Model Removal 'keyfilt:akeyfilt|keyminfilt'
+Slack : 0.175
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'keyfilt:akeyfilt|keysecfilt'
+Slack : 0.195
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -258.042
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'q'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'keyfilt:akeyfilt|keyminfilt'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'keyfilt:akeyfilt|keysecfilt'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'keyfilt:akeyfilt|keysetfilt'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'mode'
+Slack : 0.341
+TNS   : 0.000
+
+------------------------------------------------------------
