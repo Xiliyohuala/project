@@ -36,13 +36,13 @@ ARCHITECTURE behav OF seg7led_key IS
   component keyfilt is
   port (clk  : in  std_logic;
 		key1 : in  std_logic;
-		keypausefilt : out std_logic;
-		keyclrfilt : out std_logic;
+		keypause : out std_logic;
+		keyclr : out std_logic;
 		key2 : in  std_logic;
-		keyshiftfilt : out std_logic;
-		keysettingfilt : out std_logic;
+		keyshift : out std_logic;
+		keysetting : out std_logic;
 		key3 : in  std_logic;
-		keyupfilt : out std_logic
+		keyup : out std_logic
 		);
 	end component keyfilt;
 
@@ -52,13 +52,13 @@ akeyfilt: keyfilt port map
  (
 	clk =>clk,
 	key1 => key1,
-	keypausefilt =>keypausefilt,
-	keyclrfilt => clear,
+	keypause =>pause,
+	keyclr => clear,
 	key2 => key2,
-	keyshiftfilt =>keyshiftfilt,
-	keysettingfilt => setting,
+	keyshift =>shift,
+	keysetting => setting,
 	key3 => key3,
-	keyupfilt => up
+	keyup => up
  );
 
 process(clk,clkcnt)
