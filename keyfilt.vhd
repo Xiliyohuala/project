@@ -5,32 +5,39 @@ use IEEE.STD_LOGIC_UNSIGNED.all;
 entity keyfilt is
   port (clk  : in  std_logic;
 		key1 : in  std_logic;
-		keypausefilt : BUFFER std_logic;
-		keyclrfilt : BUFFER std_logic;
+		keypause : out std_logic;
+		keyclr : out std_logic;
 		key2 : in  std_logic;
-		keyshiftfilt : BUFFER std_logic;
-		keysettingfilt : BUFFER std_logic;
+		keyshift : out std_logic;
+		keysetting : out std_logic;
 		key3 : in  std_logic;
-		keyupfilt : BUFFER std_logic
+		keyup : out std_logic
 		);
 end keyfilt;
 architecture behavioral of keyfilt is
-	signal cnt : integer range 0 to 150000000; 
-	constant N :integer := 5000000;	--消抖时间，对于50Mhz的基准时钟，这相当于0.1S
+	signal cnt1 : integer range 0 to 150000000; 
+	signal cnt2 : integer range 0 to 150000000; 
+	signal cnt3 : integer range 0 to 150000000; 
+	signal keypausefilt  : std_logic := '0';
+	signal keyclrfilt  : std_logic := '0';
+	signal keyshiftfilt  : std_logic := '0';
+	signal keysettingfilt  : std_logic := '0';
+	signal keyupfilt  : std_logic := '0';
+	constant N :integer := 5000000;	
 	constant M :integer := 150000000;
 begin
 	process (clk)
 	begin 
 		if clk'event and clk = '1' then
 			if key1 = '0' then 	
-				if cnt /= M then
-					cnt<=cnt+1;
+				if cnt1 /= M then
+					cnt1<=cnt1+1;
 					end if;
 				else
-				 cnt<=0;
-				   if cnt = M then
+				 cnt1<=0;
+				   if cnt1 = M then
 					keyclrfilt<='1';
-					elsif cnt>N then
+					elsif cnt1>N then
 					keypausefilt<='1';
 				   end if;
 				end if;
@@ -39,18 +46,18 @@ begin
 				end if;
 				if keyclrfilt<='1' then
 				keyclrfilt<='0';
+
 				end if;
-				
 
 			if key2 = '0' then 	
-				if cnt /= M then 
-				   cnt<=cnt+1;
+				if cnt2 /= M then 
+				   cnt2<=cnt2+1;
 					end if;
 				else
-				 cnt<=0;
-				   if cnt = M then
+				 cnt2<=0;
+				   if cnt2 = M then
 					keysettingfilt<='1';
-					elsif cnt>N then
+					elsif cnt2>N then
 					keyshiftfilt<='1';
 				   end if;
 				end if;
@@ -62,12 +69,12 @@ begin
 				end if;
 									
 			if key3 = '0' then 	
-				if cnt /= M then 
-				  cnt<=cnt+1;
+				if cnt3 /= M then 
+				  cnt3<=cnt3+1;
 					end if;
 				else
-				 cnt<=0;
-					if cnt>N then
+				 cnt3<=0;
+					if cnt3>N then
 					keyupfilt<='1';
 				   end if;
 				end if;
@@ -76,6 +83,11 @@ begin
 				end if;
 			
 		end if;	--clk'event
+		  keypause   <= keypausefilt;
+		  keyclr   <= keyclrfilt;
+  	     keyshift  <= keyshiftfilt;
+  	     keysetting <= keysettingfilt;
+  	     keyup      <= keyupfilt;
 	end process;		
 		
 end behavioral;
