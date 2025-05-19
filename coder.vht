@@ -17,7 +17,7 @@
 -- suit user's needs .Comments are provided in each section to help the user  
 -- fill out necessary details.                                                
 -- ***************************************************************************
--- Generated on "05/12/2025 19:10:21"
+-- Generated on "05/19/2025 10:55:39"
                                                             
 -- Vhdl Test Bench template for design  :  coder
 -- 
@@ -33,16 +33,14 @@ ARCHITECTURE coder_arch OF coder_vhd_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL clk : STD_LOGIC;
-SIGNAL data_out : STD_LOGIC_VECTOR(6 DOWNTO 0):=(others=>'0');
-SIGNAL key : STD_LOGIC_VECTOR(7 DOWNTO 0):=(others=>'0');
-SIGNAL led2 : STD_LOGIC;
+SIGNAL data_out : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL key : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL segcom : STD_LOGIC;
 COMPONENT coder
 	PORT (
 	clk : IN STD_LOGIC;
-	data_out : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	key : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-	led2 : OUT STD_LOGIC;
+	data_out : OUT STD_LOGIC_VECTOR(6 DOWNTO 0):=(others=>'0');
+	key : IN STD_LOGIC_VECTOR(7 DOWNTO 0):=(others=>'0');
 	segcom : OUT STD_LOGIC
 	);
 END COMPONENT;
@@ -53,7 +51,6 @@ BEGIN
 	clk => clk,
 	data_out => data_out,
 	key => key,
-	led2 => led2,
 	segcom => segcom
 	);
 init : PROCESS                                               
@@ -68,13 +65,13 @@ always : PROCESS
 -- variable declarations                                      
 BEGIN                                                         
         -- code executes for every event on sensitivity list  
---WAIT; 
+--WAIT;  
 clk<='0'; 
 wait for 10 ns; 
 clk<='1'; 
-wait for 10 ns;                                                        
-END PROCESS always; 
-  
+wait for 10 ns;                                                           
+END PROCESS always;      
+
 keytest: PROCESS
 BEGIN
 key<="01111111"; 
@@ -82,5 +79,5 @@ wait for 200 ms;
 key<="10111111"; 
 wait for 200 ms;
 END PROCESS keytest;  
-                                       
+                                    
 END coder_arch;
