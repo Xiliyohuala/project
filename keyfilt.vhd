@@ -4,30 +4,47 @@ use IEEE.STD_LOGIC_ARITH.all;
 use IEEE.STD_LOGIC_UNSIGNED.all;
 entity keyfilt is
   port (clk  : in  std_logic;
-		key : in  std_logic;
-		keyout : out std_logic
+		keypause : in  std_logic;
+		keypausefilt : out std_logic;
+		keyclr : in  std_logic;
+		keyclrfilt : out std_logic
 		);
 end keyfilt;
 architecture behavioral of keyfilt is
-	signal keycnt : integer range 0 to 1500000000; 
-	constant N :integer := 5000000;	--0.1S
+	signal keypausecnt : integer range 0 to 50000000; 
+	signal keyclrcnt : integer range 0 to 50000000;
+	constant N :integer := 5000000;	--消抖时间，对于50Mhz的基准时钟，这相当于0.1S
 begin
 	process (clk)
 	begin 
-		if rising_edge(clk) then
-            if key = '0' then  -- 按键按下（低电平有效）
-                if keycnt < N then 
-                    keycnt <= keycnt + 1;
-                end if;
-                
-                -- 消抖完成后持续输出高电平
-                if keycnt >= N then
-                    keyout <= '1';
-                end if;
-            else                -- 按键释放
-                keycnt <= 0;
-                keyout <= '0';
-            end if;
-        end if;
-	end process;	
+		if clk'event and clk = '1' then
+			if keypause = '0' then 	--当keypause输入低电平，即按键按下
+				if keypausecnt /= N then --一直计数到N
+					keypausecnt<= keypausecnt + 1;
+				end if;
+				if keypausecnt = N-1 then --最后一个计数时输出keypausefilt脉冲
+					keypausefilt<= '1';
+				else
+					keypausefilt<= '0';
+				end if;
+			else 					--若keypause输入高电平，表明按键被释放
+				keypausecnt<= 0;
+			end if;
+		
+			if keyclr = '0' then 	--当keypause输入低电平，即按键按下
+				if keyclrcnt /= N then --一直计数到N
+					keyclrcnt<= keyclrcnt + 1;
+				end if;
+				if keyclrcnt = N-1 then --最后一个计数时输出keypausefilt脉冲
+					keyclrfilt<= '1';
+				else
+					keyclrfilt<= '0';
+				end if;
+			else 					--若keypause输入高电平，表明按键被释放
+				keyclrcnt<= 0;
+			end if;
+			
+		end if;	--clk'event
+	end process;		
+		
 end behavioral;
