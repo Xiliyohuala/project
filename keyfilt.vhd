@@ -18,15 +18,15 @@ begin
             if key = '0' then  -- 按键按下（低电平有效）
                 if keycnt < N then 
                     keycnt <= keycnt + 1;
-                end if;
-                
+                end if;                
                 -- 消抖完成后持续输出高电平
-                if keycnt >= N then
-                    keyout <= '1';
+                if keycnt >=N-1 then
+                    keyout <= '1';               
+					 
                 end if;
             else                -- 按键释放
                 keycnt <= 0;
-                keyout <= '0';
+					 keyout <= '0';
             end if;
         end if;
 	end process;	
